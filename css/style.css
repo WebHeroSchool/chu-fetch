@@ -7,7 +7,7 @@
 	width: 200px;
 	margin: 0 30px ;
 	border-radius: 10%;
-	transition: transform 1s, background-size 1s;
+	transition: transform 0.5s, background-size 1.5s;
 	height: 200px;
 	background-image: url(../img/crazysouslik.png);
 	background-size: 95%;
@@ -46,5 +46,5 @@
 	display: inline-block;
 	margin-left: 15px;
 	text-align: right;
-
+	font-weight: bold;
 }
