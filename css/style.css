@@ -1,0 +1,50 @@
+.title {
+	text-align: center;
+}
+
+.avatar-user {
+	display: inline-block;
+	width: 200px;
+	margin: 0 30px ;
+	border-radius: 10%;
+	transition: transform 1s, background-size 1s;
+	height: 200px;
+	background-image: url(../img/crazysouslik.png);
+	background-size: 95%;
+	border: none;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.avatar-user:hover {
+	transform: scale(1.1);
+	background-size: 110%
+}
+
+.form-search {
+	float: right;
+	margin-right: 30px;
+}
+.name-link {
+	font-weight: bold;
+	margin-left: 15px;
+	text-align: right;
+}
+
+.wrapper {
+	display: inline-block;
+	transform: translateY(-145px);
+}
+.wrap {
+	display: flex;
+	border-bottom: 1px solid #555;
+	padding: 5px;
+	margin-bottom: 10px;
+
+}
+.info {
+	display: inline-block;
+	margin-left: 15px;
+	text-align: right;
+
+}
