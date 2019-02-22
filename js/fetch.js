@@ -1,16 +1,24 @@
-let log = console.log; 
-// let user = prompt('enter a username for search');
-let userName = '6thSence';
-	userName = 'Chuvo'//for exampl
+
+let param = new URLSearchParams(window.location.search);
+let userName1 = param.get('username');
+let url = 'https://api.github.com/users/';
+let request = url + userName1;
+
+
+
+
+
+// let userName = '6thSence';
+// 	userName = 'Chuvo'//for exampl
 document.getElementById('search-user').addEventListener('click', function() {
 	userName = document.getElementById('nickname-value').value;
-	log('userName for search = ' + userName);
-	searchUser (userName);
+	// log('userName for search = ' + userName);
+	searchUser ();
 })
 
 function searchUser () {	
 	let nameLink = document.getElementById('name-link');
-	fetch(`https://api.github.com/users/${userName}`)
+	fetch(request)
 		.then( function getResponse(response) {
 			return response.json()
 			//добавить обработку ошибки
@@ -36,7 +44,12 @@ function searchUser () {
 			imgElem.style.backgroundImage =  `url(${avatarUrl}`;
 			return json				
 		})
+.then( json => {
+			log(json);
+			document.getElementById('data').innerHTML=json;
+			return json
 
+		})		
 		.then( function getBio(json) {
 			let infoUser = json.bio;
 			log('split= ' + json.bio);
@@ -47,8 +60,11 @@ function searchUser () {
 				return json
 			} else {
 				info.innerHTML ='информации о пользователе нет';
-			}			
-		})			
+				return	json
+			}	
+			return json
+		})
+			
 }
 	
 

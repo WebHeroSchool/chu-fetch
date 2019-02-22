@@ -48,3 +48,7 @@
 	text-align: right;
 	font-weight: bold;
 }
+.data {
+	width: 30px;
+	height: 300px;
+}
